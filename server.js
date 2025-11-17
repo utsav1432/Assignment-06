@@ -1,5 +1,7 @@
 const http = require('http');
 
+const PORT = 4000;
+
 const app = http.createServer((req, res) => {
     if (req.url === '/' || req.url === '/home') {
         res.write(`<!DOCTYPE html>
@@ -152,8 +154,6 @@ const app = http.createServer((req, res) => {
         return res.end();
     }
 })
-
-const PORT = 4000;
 
 app.listen(PORT, () => {
     console.log("NodeJs server is up and running - http://localhost:4000")
